@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 function MainLayout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100">
       <Navbar />
 
       {/* Page Content */}
