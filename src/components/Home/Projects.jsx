@@ -181,6 +181,20 @@ function Projects() {
                   <li key={i}>{feat}</li>
                 ))}
               </ul>
+
+              <div className="mt-5 flex justify-end">
+                <motion.span
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg cursor-pointer"
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: '0px 10px 30px rgba(99,102,241,0.5)',
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  View Project →
+                </motion.span>
+              </div>
             </motion.a>
           ))}
         </motion.div>
@@ -219,6 +233,20 @@ function Projects() {
                   <li key={i}>{feat}</li>
                 ))}
               </ul>
+
+              <div className="mt-5 flex justify-end">
+                <motion.span
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg cursor-pointer"
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: '0px 10px 30px rgba(99,102,241,0.5)',
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  View Project →
+                </motion.span>
+              </div>
             </motion.a>
           ))}
         </motion.div>
