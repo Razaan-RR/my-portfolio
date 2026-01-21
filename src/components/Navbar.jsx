@@ -8,16 +8,13 @@ function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <nav className="fixed top-5 left-1/2 z-[9999] w-[92%] max-w-6xl -translate-x-1/2 rounded-2xl border border-white/40 bg-slate-100/50 backdrop-blur-xl shadow-lg">
         <div className="flex items-center justify-between px-6 py-4">
           
-          {/* Logo */}
           <h1 className="text-xl font-bold tracking-wide bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
             Razaan<span className="text-slate-700">Reza</span>
           </h1>
 
-          {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
             {links.map((item) => (
               <li key={item}>
@@ -25,7 +22,7 @@ function Navbar() {
                   to={item.toLowerCase()}
                   smooth={true}
                   duration={800}
-                  offset={-100} // adjust for navbar height
+                  offset={-100} 
                   className="relative cursor-pointer transition hover:text-slate-900 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-purple-500 after:transition-all hover:after:w-full"
                 >
                   {item}
@@ -34,7 +31,6 @@ function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
           <Link
             to="contact"
             smooth={true}
@@ -45,7 +41,6 @@ function Navbar() {
             Contact
           </Link>
 
-          {/* Mobile Button */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-slate-800 focus:outline-none"
@@ -65,7 +60,6 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <div
         className={`fixed top-24 left-1/2 z-[9998] w-[92%] max-w-6xl -translate-x-1/2 rounded-2xl border border-white/40 bg-slate-100/70 backdrop-blur-xl shadow-lg transition-all duration-300 md:hidden ${
           open ? "opacity-100 scale-100" : "pointer-events-none opacity-0 scale-95"

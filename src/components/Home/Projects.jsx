@@ -9,7 +9,6 @@ import {
   SiExpress,
 } from 'react-icons/si'
 
-// Frontend Projects
 const frontendProjects = [
   {
     name: 'Artify – Online Art Learning Site',
@@ -49,7 +48,6 @@ const frontendProjects = [
   },
 ]
 
-// Backend Projects
 const backendProjects = [
   {
     name: 'BookHive – A Book Courier App',
@@ -113,7 +111,6 @@ function Projects() {
       id="projects"
       className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-20"
     >
-      {/* Floating Tech Badges */}
       <motion.div
         className="absolute top-10 left-10 text-6xl text-blue-400 opacity-20"
         animate={{ rotate: [0, 360] }}
@@ -136,7 +133,6 @@ function Projects() {
         <SiNodedotjs />
       </motion.div>
 
-      {/* Section Heading */}
       <motion.h2
         className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
@@ -147,7 +143,6 @@ function Projects() {
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-7xl">
-        {/* Frontend Projects */}
         <motion.div
           className="space-y-6"
           initial={{ opacity: 0, x: -50 }}
@@ -199,7 +194,6 @@ function Projects() {
           ))}
         </motion.div>
 
-        {/* Backend Projects */}
         <motion.div
           className="space-y-6"
           initial={{ opacity: 0, x: 50 }}
@@ -252,7 +246,6 @@ function Projects() {
         </motion.div>
       </div>
 
-      {/* Custom animations */}
       <style>
         {`
           @keyframes bounceSlow {

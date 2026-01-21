@@ -20,7 +20,6 @@ function Contact() {
       id="contact"
       className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-20 overflow-hidden"
     >
-      {/* Floating background icons */}
       <motion.div
         className="absolute top-10 left-10 text-6xl text-blue-400 opacity-10"
         animate={{ rotate: [0, 360] }}
@@ -43,7 +42,6 @@ function Contact() {
         <MdLocationOn />
       </motion.div>
 
-      {/* Section Heading */}
       <motion.h2
         className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
@@ -59,7 +57,6 @@ function Contact() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
-        {/* Contact Info */}
         <div className="space-y-6">
           {contactInfo.map((info, index) => (
             <motion.div
@@ -74,7 +71,6 @@ function Contact() {
           ))}
         </div>
 
-        {/* Social Links */}
         <div className="flex flex-col items-center justify-center gap-6">
           <motion.h3 className="text-xl font-semibold text-purple-500 mb-4">
             Connect With Me
@@ -97,7 +93,6 @@ function Contact() {
         </div>
       </motion.div>
 
-      {/* Custom animations */}
       <style>
         {`
           @keyframes bounceSlow {

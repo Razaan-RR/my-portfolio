@@ -5,7 +5,6 @@ import { SiReact, SiNextdotjs, SiNodedotjs } from 'react-icons/si'
 function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
-      {/* Floating pastel blobs */}
       <motion.div
         className="absolute -top-24 -left-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-cyan-300/30 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
@@ -17,10 +16,9 @@ function Hero() {
         transition={{ type: 'tween', duration: 10, repeat: Infinity, delay: 2 }}
       />
 
-      {/* Floating skill icons */}
       <motion.div
         className="absolute top-20 left-1/4 text-6xl text-blue-400"
-        animate={{ y: [0, -20] }} // only two keyframes for spring
+        animate={{ y: [0, -20] }} 
         transition={{
           type: 'spring',
           stiffness: 80,
@@ -32,7 +30,7 @@ function Hero() {
       </motion.div>
       <motion.div
         className="absolute bottom-32 right-1/3 text-5xl text-green-400"
-        animate={{ y: [0, 15], rotate: [0, 10] }} // two keyframes for spring
+        animate={{ y: [0, 15], rotate: [0, 10] }}
         transition={{
           type: 'spring',
           stiffness: 80,
@@ -56,7 +54,6 @@ function Hero() {
         <SiNodedotjs />
       </motion.div>
 
-      {/* Main Hero Text */}
       <motion.div
         className="relative z-10 text-center md:text-left max-w-3xl"
         initial={{ opacity: 0, y: 50 }}
@@ -79,7 +76,6 @@ function Hero() {
           and MongoDB.
         </p>
 
-        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-6">
           <motion.a
             href="#projects"
@@ -100,7 +96,6 @@ function Hero() {
         </div>
       </motion.div>
 
-      {/* Custom spin animation */}
       <motion.div
         className="absolute bottom-10 left-1/2 h-40 w-40 rounded-full bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 opacity-50 blur-2xl"
         animate={{ rotate: 360 }}

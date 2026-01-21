@@ -83,11 +83,9 @@ function Skills() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden
       bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 pt-20"
     >
-      {/* Floating pastel blobs */}
       <div className="absolute -top-28 -left-28 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl animate-pulse-slow" />
       <div className="absolute -bottom-32 right-16 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl animate-pulse-slow delay-500" />
 
-      {/* Section Header */}
       <motion.h2
         className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 mb-12"
         initial={{ opacity: 0, y: -30 }}
@@ -97,7 +95,6 @@ function Skills() {
         Tech & Talents
       </motion.h2>
 
-      {/* Technical Skills */}
       <div className="flex flex-col w-full max-w-7xl gap-12 mb-24"> {/* Increased mb from 16 -> 24 */}
         {techGroups.map((group, index) => (
           <motion.div
@@ -117,7 +114,7 @@ function Skills() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div
-                    className={`bg-gradient-to-r ${group.color} p-3 rounded-full text-white mb-2`}
+                    className={`bg-linear-to-r ${group.color} p-3 rounded-full text-white mb-2`}
                   >
                     {skill.icon}
                   </div>
@@ -131,7 +128,6 @@ function Skills() {
         ))}
       </div>
 
-      {/* Soft Skills */}
       <motion.div
         className="flex flex-col w-full max-w-7xl gap-6 mb-24" 
         initial={{ opacity: 0, y: 50 }}
@@ -154,7 +150,6 @@ function Skills() {
         </div>
       </motion.div>
 
-      {/* Custom animations */}
       <style>
         {`
           @keyframes pulseSlow {
