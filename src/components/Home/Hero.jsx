@@ -72,7 +72,7 @@ function Hero() {
         </h1>
         <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
           Crafting cutting-edge web applications that are fast, scalable, and
-          user-friendly. Explore projects built with React, Next.js, Node.js,
+          user-friendly. Explore projects built with React, Typescript, Next.js, Node.js,
           and MongoDB.
         </p>
 

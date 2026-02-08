@@ -4,6 +4,17 @@ import { SiGithub } from 'react-icons/si'
 
 const frontendProjects = [
   {
+    name: 'AI Call Management System',
+    thumbnail: '/ai-call-management.png',
+    tech: ['React', 'React Router', 'Tailwind CSS', 'Lucide Icons', 'Figma'],
+    link: 'https://ai-call-management.netlify.app/',
+    github: 'https://github.com/Razaan-RR/call-management',
+    features: [
+      'End-to-end Figma-to-UI conversion across the entire application, delivering almost pixel-perfect layouts, consistent components, and responsive screens',
+      'Dark-themed, glassmorphism-inspired UI with gradient stat cards and responsive layout',
+    ],
+  },
+  {
     name: 'Artify - Online Art Learning Site',
     thumbnail: '/artify.png',
     tech: [
@@ -44,23 +55,40 @@ const backendProjects = [
     thumbnail: '/bookhive.png',
     tech: [
       'react',
-      'react-dom',
-      'react-router-dom',
-      'axios',
       'firebase',
-      'react-query',
-      'react-icons',
       'tailwindcss',
-      'react-hook-form',
+      'mongodb',
+      'express',
+      'node',
+      'stripe-payment',
     ],
     link: 'https://sage-bubblegum-e870ed.netlify.app/',
     github: 'https://github.com/Razaan-RR/BookHive-MERN',
     features: [
       'Users can browse, wishlist, review, and pay for books; track order and payment status',
-      'Librarians manage books, update orders, and handle publishing',
-      'Admins control all users, books, and have full system-wide oversight',
-      'Users can pay for their orders online',
-      'Orders track both order status (pending → shipped → delivered) and payment status (unpaid → paid)',
+      'Librarians manage books, and update orders',
+      'Admins control and have full system-wide oversight',
+    ],
+  },
+  {
+    name: 'Zarion – Stock Market Tracker',
+    thumbnail: '/zarion.png',
+    tech: [
+      'TypeScript',
+      'Next.js',
+      'MongoDB',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Better-Auth',
+      'Inngest',
+      'Nodemailer',
+    ],
+    link: 'https://stock-app-typescript-nextjs.vercel.app/',
+    github: 'https://github.com/Razaan-RR/stock-app-typescript-nextjs',
+    features: [
+      'Secure authentication system with protected routes and personalized user sessions',
+      'User-specific watchlist management with real-time tracking',
+      'Live stock price and percentage change updates',
     ],
   },
   {
@@ -75,11 +103,7 @@ const backendProjects = [
       'DaisyUI',
       'firebase',
       'axios',
-      'react-tooltip',
       'framer-motion',
-      'sweetalert2',
-      'react-icons',
-      'prop-types',
     ],
     link: 'https://trackify-habit-tracker.netlify.app/',
     github: 'https://github.com/Razaan-RR/Habit_Tracker',
@@ -116,7 +140,7 @@ function Projects() {
             transition={{ duration: 1 }}
           >
             <h3
-              className={`text-2xl font-bold mb-4 ${
+              className={`pl-35 text-2xl font-bold mb-4 ${
                 colIndex === 0 ? 'text-purple-500' : 'text-cyan-500'
               }`}
             >
@@ -126,7 +150,7 @@ function Projects() {
             {projects.map((proj, index) => (
               <motion.div
                 key={index}
-                className="rounded-2xl bg-white/50 backdrop-blur-xl p-6 shadow-2xl"
+                className="rounded-2xl bg-white/50 backdrop-blur-xl p-6 shadow-2xl flex flex-col h-[520px]"
               >
                 <img
                   src={proj.thumbnail}
@@ -136,22 +160,24 @@ function Projects() {
 
                 <h4 className="font-semibold text-xl mb-2">{proj.name}</h4>
 
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {proj.tech.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white text-xs font-semibold animate-bounce-slow"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <div className="flex flex-col flex-grow">
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {proj.tech.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white text-xs font-semibold animate-bounce-slow"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
-                <ul className="list-disc list-inside text-slate-700 text-sm sm:text-base">
-                  {proj.features.map((feat, i) => (
-                    <li key={i}>{feat}</li>
-                  ))}
-                </ul>
+                  <ul className="list-disc list-inside text-slate-700 text-sm sm:text-base">
+                    {proj.features.map((feat, i) => (
+                      <li key={i}>{feat}</li>
+                    ))}
+                  </ul>
+                </div>
 
                 <div className="mt-6 flex justify-end gap-4">
                   <motion.a
