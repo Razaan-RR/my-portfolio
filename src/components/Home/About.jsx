@@ -43,9 +43,9 @@ function About() {
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              I specialize in <span className="font-semibold">React.js, Next.js, Node.js, Express, MongoDB</span> and integrate 
+              I specialize in <span className="font-semibold">React.js, Next.js, Node.js, Express, MongoDB, Nextjs, Typescript</span> and integrate 
               modern tools like <span className="font-semibold">Axios</span>, <span className="font-semibold">Redux/Context API</span>, and 
-              <span className="font-semibold"> Tailwind CSS</span> to create responsive, interactive, and efficient front-end experiences.
+              <span className="font-semibold"> Tailwind CSS, Shadcn</span> to create responsive, interactive, and efficient front-end experiences.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">

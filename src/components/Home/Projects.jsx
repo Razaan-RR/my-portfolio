@@ -1,17 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import {
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiMongodb,
-  SiTailwindcss,
-  SiExpress,
-} from 'react-icons/si'
+import { SiGithub } from 'react-icons/si'
 
 const frontendProjects = [
   {
-    name: 'Artify – Online Art Learning Site',
+    name: 'Artify - Online Art Learning Site',
+    thumbnail: '/artify.png',
     tech: [
       'Node.js',
       'React',
@@ -23,23 +17,19 @@ const frontendProjects = [
       'Swiper',
     ],
     link: 'https://stellar-kitsune-e25f81.netlify.app/',
+    github: 'https://github.com/razaan-rr/artify',
     features: [
       'Firebase Email/Password and Google authentication',
-      'Login, Signup, and Forgot Password pages',
-      'Protected routes (only logged-in users can view skill details)',
-      'Update profile (name and photo)',
       'Responsive design for mobile, tablet, and desktop',
-      'Hero slider, skill cards, and provider sections',
-      'Toast notifications using react-hot-toast',
       'Animations using AOS and Swiper',
-      'JSON data used for skill listings',
-      'Environment variables used for Firebase configuration',
     ],
   },
   {
-    name: 'Significo',
+    name: 'Significo - Healthcare Innovations',
+    thumbnail: '/significo.png',
     tech: ['React', 'GSAP', 'Framer Motion', 'Swiper', 'Tailwind CSS'],
     link: 'https://razaan-rr.github.io/Significo_clone/',
+    github: 'https://github.com/razaan-rr/Significo_clone',
     features: [
       'Highly interactive UI animations with GSAP and Framer Motion',
       'Responsive carousel using Swiper',
@@ -51,6 +41,7 @@ const frontendProjects = [
 const backendProjects = [
   {
     name: 'BookHive – A Book Courier App',
+    thumbnail: '/bookhive.png',
     tech: [
       'react',
       'react-dom',
@@ -63,21 +54,18 @@ const backendProjects = [
       'react-hook-form',
     ],
     link: 'https://sage-bubblegum-e870ed.netlify.app/',
+    github: 'https://github.com/Razaan-RR/BookHive-MERN',
     features: [
       'Users can browse, wishlist, review, and pay for books; track order and payment status',
       'Librarians manage books, update orders, and handle publishing',
       'Admins control all users, books, and have full system-wide oversight',
-      'Wishlist & Reviews: Users can add books to a wishlist and leave ratings/reviews',
-      'Search & Sort: Search books by name and sort by price',
-      'JWT Protected Routes: Only authenticated users can access protected routes',
-      'Animated & Responsive UI: Engaging banners, cards, and dashboards',
       'Users can pay for their orders online',
       'Orders track both order status (pending → shipped → delivered) and payment status (unpaid → paid)',
-      'Role-Based Features for Users, Librarians, and Admins',
     ],
   },
   {
     name: 'Trackify – Habit Tracking Web App',
+    thumbnail: '/trackify.png',
     tech: [
       'MongoDB',
       'Express',
@@ -94,13 +82,11 @@ const backendProjects = [
       'prop-types',
     ],
     link: 'https://trackify-habit-tracker.netlify.app/',
+    github: 'https://github.com/Razaan-RR/Habit_Tracker',
     features: [
       'Create your own personalized and secured account',
-      'Track your habits daily and mark completed tasks to keep yourself motivated',
-      'Discover others with similar habits and daily achievements to boost confidence',
-      'Add new habits whenever inspired',
-      'Update or delete your habits as needed',
-      'User-friendly UI',
+      'Track your habits daily and discover others with similar habits and daily achievements to boost confidence',
+      'Add/Update/Delete new habits whenever inspired',
     ],
   },
 ]
@@ -109,141 +95,89 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-20"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-10"
     >
-      <motion.div
-        className="absolute top-10 left-10 text-6xl text-blue-400 opacity-20"
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-      >
-        <SiReact />
-      </motion.div>
-      <motion.div
-        className="absolute top-1/3 right-1/4 text-5xl text-green-400 opacity-20"
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <SiNextdotjs />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-32 left-1/3 text-5xl text-yellow-500 opacity-20"
-        animate={{ y: [0, 15, 0], rotate: [0, 10, -10, 0] }}
-        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <SiNodedotjs />
-      </motion.div>
-
       <motion.h2
-        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
+        className="text-3xl sm:text-4xl lg:text-5xl leading-[2] font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Full-Stack Portfolio
+        Featured Projects
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full max-w-7xl">
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h3 className="text-2xl font-bold text-cyan-500 mb-4">
-            Frontend Projects
-          </h3>
-          {frontendProjects.map((proj, index) => (
-            <motion.a
-              key={index}
-              href={proj.link}
-              className="relative block rounded-2xl bg-white/50 backdrop-blur-xl p-6 shadow-2xl hover:scale-105 hover:shadow-3xl transition-transform"
-              whileHover={{ scale: 1.05, rotate: [0, 2, -2, 0] }}
-              transition={{ type: 'spring', stiffness: 200 }}
+        {[backendProjects, frontendProjects].map((projects, colIndex) => (
+          <motion.div
+            key={colIndex}
+            className="space-y-6"
+            initial={{ opacity: 0, x: colIndex === 0 ? -50 : 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h3
+              className={`text-2xl font-bold mb-4 ${
+                colIndex === 0 ? 'text-purple-500' : 'text-cyan-500'
+              }`}
             >
-              <h4 className="font-semibold text-xl mb-2">{proj.name}</h4>
-              <div className="flex flex-wrap gap-2 mb-2">
-                {proj.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white text-xs font-semibold animate-bounce-slow"
+              {colIndex === 0 ? 'Full-Stack Projects' : 'Frontend Projects'}
+            </h3>
+
+            {projects.map((proj, index) => (
+              <motion.div
+                key={index}
+                className="rounded-2xl bg-white/50 backdrop-blur-xl p-6 shadow-2xl"
+              >
+                <img
+                  src={proj.thumbnail}
+                  alt={proj.name}
+                  className="rounded-xl mb-4 w-full h-48 object-cover"
+                />
+
+                <h4 className="font-semibold text-xl mb-2">{proj.name}</h4>
+
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {proj.tech.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white text-xs font-semibold animate-bounce-slow"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="list-disc list-inside text-slate-700 text-sm sm:text-base">
+                  {proj.features.map((feat, i) => (
+                    <li key={i}>{feat}</li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex justify-end gap-4">
+                  <motion.a
+                    href={proj.github}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-slate-800 text-white shadow-lg"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="list-disc list-inside text-slate-700 text-sm sm:text-base">
-                {proj.features.map((feat, i) => (
-                  <li key={i}>{feat}</li>
-                ))}
-              </ul>
+                    <SiGithub size={18} /> GitHub
+                  </motion.a>
 
-              <div className="mt-5 flex justify-end">
-                <motion.span
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg cursor-pointer"
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: '0px 10px 30px rgba(99,102,241,0.5)',
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  View Project →
-                </motion.span>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
-
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h3 className="text-2xl font-bold text-purple-500 mb-4">
-            Backend Projects
-          </h3>
-          {backendProjects.map((proj, index) => (
-            <motion.a
-              key={index}
-              href={proj.link}
-              className="relative block rounded-2xl bg-white/50 backdrop-blur-xl p-6 shadow-2xl hover:scale-105 hover:shadow-3xl transition-transform"
-              whileHover={{ scale: 1.05, rotate: [0, 2, -2, 0] }}
-              transition={{ type: 'spring', stiffness: 200 }}
-            >
-              <h4 className="font-semibold text-xl mb-2">{proj.name}</h4>
-              <div className="flex flex-wrap gap-2 mb-2">
-                {proj.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-1 rounded-full bg-white/20 backdrop-blur-md border border-purple-400 text-purple-300 text-xs font-semibold animate-bounce-slow shadow-lg"
+                  <motion.a
+                    href={proj.link}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="list-disc list-inside text-slate-700 text-sm sm:text-base">
-                {proj.features.map((feat, i) => (
-                  <li key={i}>{feat}</li>
-                ))}
-              </ul>
-
-              <div className="mt-5 flex justify-end">
-                <motion.span
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg cursor-pointer"
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: '0px 10px 30px rgba(99,102,241,0.5)',
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  View Project →
-                </motion.span>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
+                    View Project →
+                  </motion.a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        ))}
       </div>
 
       <style>

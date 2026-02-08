@@ -1,7 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import { motion } from 'framer-motion'
 import {
   SiJavascript,
+  SiTypescript,
   SiPhp,
   SiReact,
   SiNextdotjs,
@@ -15,67 +16,70 @@ import {
   SiMysql,
   SiGithub,
   SiVercel,
-  SiNetlify
-} from "react-icons/si";
+  SiNetlify,
+  SiRadixui,
+} from 'react-icons/si'
 import {
   FaLightbulb,
   FaUsers,
   FaBrain,
   FaHandshake,
-  FaComments
-} from "react-icons/fa";
+  FaComments,
+} from 'react-icons/fa'
 
 function Skills() {
   // Technical groups
   const techGroups = [
     {
-      group: "Languages",
-      color: "from-yellow-400 via-orange-400 to-red-400",
+      group: 'Languages',
+      color: 'from-yellow-400 via-orange-400 to-red-400',
       skills: [
-        { name: "JavaScript", icon: <SiJavascript size={24} /> },
-        { name: "PHP", icon: <SiPhp size={24} /> }
-      ]
+        { name: 'JavaScript', icon: <SiJavascript size={24} /> },
+        { name: 'TypeScript', icon: <SiTypescript size={24} /> },
+        { name: 'PHP', icon: <SiPhp size={24} /> },
+      ],
     },
     {
-      group: "Frameworks & Libraries",
-      color: "from-cyan-400 via-blue-500 to-purple-500",
+      group: 'Frameworks & Libraries',
+      color: 'from-cyan-400 via-blue-500 to-purple-500',
       skills: [
-        { name: "React.js", icon: <SiReact size={24} /> },
-        { name: "Next.js", icon: <SiNextdotjs size={24} /> },
-        { name: "Node.js", icon: <SiNodedotjs size={24} /> },
-        { name: "Express.js", icon: <SiExpress size={24} /> },
-        { name: "Tailwind", icon: <SiTailwindcss size={24} /> },
-        { name: "Bootstrap", icon: <SiBootstrap size={24} /> },
-        { name: "Laravel", icon: <SiLaravel size={24} /> }
-      ]
+        { name: 'React.js', icon: <SiReact size={24} /> },
+        { name: 'Next.js', icon: <SiNextdotjs size={24} /> },
+        { name: 'Node.js', icon: <SiNodedotjs size={24} /> },
+        { name: 'Express.js', icon: <SiExpress size={24} /> },
+        { name: 'Tailwind', icon: <SiTailwindcss size={24} /> },
+        { name: 'shadcn/ui', icon: <SiRadixui size={24} /> },
+        { name: 'Bootstrap', icon: <SiBootstrap size={24} /> },
+        { name: 'Laravel', icon: <SiLaravel size={24} /> },
+      ],
     },
     {
-      group: "Databases & Tools",
-      color: "from-green-400 via-emerald-400 to-teal-400",
+      group: 'Databases & Tools',
+      color: 'from-green-400 via-emerald-400 to-teal-400',
       skills: [
-        { name: "MongoDB", icon: <SiMongodb size={24} /> },
-        { name: "Firebase", icon: <SiFirebase size={24} /> },
-        { name: "SQL", icon: <SiMysql size={24} /> },
-        { name: "Github", icon: <SiGithub size={24} /> }
-      ]
+        { name: 'MongoDB', icon: <SiMongodb size={24} /> },
+        { name: 'Firebase', icon: <SiFirebase size={24} /> },
+        { name: 'SQL', icon: <SiMysql size={24} /> },
+        { name: 'Github', icon: <SiGithub size={24} /> },
+      ],
     },
     {
-      group: "Deployment",
-      color: "from-pink-400 via-purple-400 to-indigo-400",
+      group: 'Deployment',
+      color: 'from-pink-400 via-purple-400 to-indigo-400',
       skills: [
-        { name: "Vercel", icon: <SiVercel size={24} /> },
-        { name: "Netlify", icon: <SiNetlify size={24} /> }
-      ]
-    }
-  ];
+        { name: 'Vercel', icon: <SiVercel size={24} /> },
+        { name: 'Netlify', icon: <SiNetlify size={24} /> },
+      ],
+    },
+  ]
 
   const softSkills = [
-    { name: "Problem Solving", icon: <FaLightbulb size={24} /> },
-    { name: "Teamwork", icon: <FaUsers size={24} /> },
-    { name: "Critical Thinking", icon: <FaBrain size={24} /> },
-    { name: "Communication", icon: <FaComments size={24} /> },
-    { name: "Collaboration", icon: <FaHandshake size={24} /> }
-  ];
+    { name: 'Problem Solving', icon: <FaLightbulb size={24} /> },
+    { name: 'Teamwork', icon: <FaUsers size={24} /> },
+    { name: 'Critical Thinking', icon: <FaBrain size={24} /> },
+    { name: 'Communication', icon: <FaComments size={24} /> },
+    { name: 'Collaboration', icon: <FaHandshake size={24} /> },
+  ]
 
   return (
     <section
@@ -95,7 +99,9 @@ function Skills() {
         Tech & Talents
       </motion.h2>
 
-      <div className="flex flex-col w-full max-w-7xl gap-12 mb-24"> {/* Increased mb from 16 -> 24 */}
+      <div className="flex flex-col w-full max-w-7xl gap-12 mb-24">
+        {' '}
+        {/* Increased mb from 16 -> 24 */}
         {techGroups.map((group, index) => (
           <motion.div
             key={group.group}
@@ -111,7 +117,7 @@ function Skills() {
                   key={skill.name}
                   className={`flex flex-col items-center justify-center p-4 rounded-2xl bg-white/50 backdrop-blur shadow-lg cursor-pointer`}
                   whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div
                     className={`bg-linear-to-r ${group.color} p-3 rounded-full text-white mb-2`}
@@ -129,7 +135,7 @@ function Skills() {
       </div>
 
       <motion.div
-        className="flex flex-col w-full max-w-7xl gap-6 mb-24" 
+        className="flex flex-col w-full max-w-7xl gap-6 mb-24"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -141,7 +147,7 @@ function Skills() {
               key={skill.name}
               className="flex items-center gap-3 p-4 rounded-2xl bg-white/50 backdrop-blur shadow-lg hover:scale-105 transition-transform cursor-pointer"
               whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-purple-500">{skill.icon}</div>
               <span className="text-slate-700 font-semibold">{skill.name}</span>
@@ -162,7 +168,7 @@ function Skills() {
         `}
       </style>
     </section>
-  );
+  )
 }
 
-export default Skills;
+export default Skills
