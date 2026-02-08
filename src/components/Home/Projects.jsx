@@ -140,7 +140,7 @@ function Projects() {
             transition={{ duration: 1 }}
           >
             <h3
-              className={`pl-35 text-2xl font-bold mb-4 ${
+              className={`text-xl sm:text-2xl md:text-3xl font-bold mb-4 ${
                 colIndex === 0 ? 'text-purple-500' : 'text-cyan-500'
               }`}
             >
@@ -179,12 +179,12 @@ function Projects() {
                   </ul>
                 </div>
 
-                <div className="mt-6 flex justify-end gap-4">
+                <div className="mt-6 flex flex-wrap justify-end gap-2 sm:gap-4">
                   <motion.a
                     href={proj.github}
                     target="_blank"
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-slate-800 text-white shadow-lg"
-                    whileHover={{ scale: 1.1 }}
+                    className="inline-flex flex-1 sm:flex-auto items-center justify-center gap-2 px-4 sm:px-5 py-2 rounded-full text-sm font-semibold bg-slate-800 text-white shadow-lg min-w-[120px]"
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <SiGithub size={18} /> GitHub
@@ -193,8 +193,8 @@ function Projects() {
                   <motion.a
                     href={proj.link}
                     target="_blank"
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg"
-                    whileHover={{ scale: 1.1 }}
+                    className="inline-flex flex-1 sm:flex-auto items-center justify-center gap-2 px-4 sm:px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white shadow-lg min-w-[120px]"
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     View Project →
