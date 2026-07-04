@@ -30,42 +30,64 @@ function About() {
           </div>
 
           <div className="space-y-6 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight
-              bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h2
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight
+              bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
               About Me
             </h2>
 
-            <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-lg mx-auto md:mx-0 animate-fade-in">
-              I am <span className="font-semibold text-cyan-500">Razaan Reza</span>, a MERN Stack Developer with 
-              over <span className="font-semibold text-purple-500">1+ years of hands-on experience</span> building 
-              high-performance, full-stack web applications. My work involves <span className="font-semibold text-blue-500">RESTful APIs</span>, 
-              <span className="font-semibold text-purple-500"> JWT authentication</span>, and <span className="font-semibold text-blue-500">role-based access control</span> to deliver secure and scalable solutions.
+            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
+              I am{' '}
+              <span className="font-semibold text-cyan-500">Razaan Reza</span>,
+              a Full Stack Developer focused on building practical web
+              applications using <span className="font-semibold">Laravel</span>{' '}
+              on the backend and working extensively with{' '}
+              <span className="font-semibold">Blade templates </span>
+              to implement UI based on provided controllers and models.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              I specialize in <span className="font-semibold">React.js, Next.js, Node.js, Express, MongoDB, Nextjs, Typescript</span> and integrate 
-              modern tools like <span className="font-semibold">Firebase</span>, <span className="font-semibold">Redux/Context API</span>, and 
-              <span className="font-semibold"> Tailwind CSS, Shadcn</span> to create responsive, interactive, and efficient front-end experiences.
+              My work mainly involves integrating{' '}
+              <span className="font-semibold">MVC architecture</span>, handling{' '}
+              <span className="font-semibold">RESTful APIs</span>, and building
+              features such as{' '}
+              <span className="font-semibold">authentication systems</span>,
+              <span className="font-semibold"> role-based access control</span>,
+              and
+              <span className="font-semibold"> CRUD modules</span> in Laravel
+              applications.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              My projects emphasize <span className="font-semibold">clean code architecture</span>, <span className="font-semibold">asynchronous data handling</span>, 
-              <span className="font-semibold"> CRUD operations</span>, and <span className="font-semibold">state management</span> best practices. I follow agile development processes to 
-              deliver robust, production-ready web applications that scale seamlessly.
+              On the frontend side, I work with{' '}
+              <span className="font-semibold">Blade UI</span>, along with modern
+              styling using <span className="font-semibold">Tailwind CSS</span>,
+              to create responsive and structured interfaces that align with
+              backend logic.
             </p>
 
-            <div className="flex justify-center md:justify-start gap-4 mt-4">
+            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
+              I focus on writing clean, maintainable code while following
+              Laravel’s structure. Most of my experience comes from implementing
+              backend-driven features into functional, production-style web
+              applications.
+            </p>
+
+            <div className="flex justify-center md:justify-start gap-4 mt-4 flex-wrap">
               <a
                 href="#projects"
-                className="rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-6 py-2 font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 animate-bounce-slow"
+                className="rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 px-6 py-2 font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 animate-fade-in"
               >
                 See My Work
               </a>
+
               <a
-                href="#contact"
-                className="rounded-full border border-slate-400/40 bg-white/40 backdrop-blur px-6 py-2 font-semibold text-slate-800 transition hover:bg-white/70 animate-fade-in"
+                href="/resume.pdf"
+                download
+                className="rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 px-6 py-2 font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 animate-fade-in"
               >
-                Contact Me
+                Download Resume
               </a>
             </div>
           </div>

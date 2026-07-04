@@ -119,7 +119,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-10"
+      className="relative flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-10"
     >
       <motion.h2
         className="text-3xl sm:text-4xl lg:text-5xl leading-[2] font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"

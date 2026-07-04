@@ -17,7 +17,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 overflow-hidden"
+      className="relative py-10 flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 overflow-hidden"
     >
       <motion.div
         className="absolute top-10 left-10 text-6xl text-blue-400 opacity-10"

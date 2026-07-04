@@ -3,15 +3,17 @@ import Contact from './Contact'
 import Hero from './Hero'
 import Projects from './Projects'
 import Skills from './Skills'
+import Experience from './Experience'
 
 function Home() {
   return (
     <div>
-        <Hero></Hero>
-        <About></About>
-        <Skills></Skills>
-        <Projects></Projects>
-        <Contact></Contact>
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
     </div>
   )
 }
