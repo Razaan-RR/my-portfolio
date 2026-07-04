@@ -1,2 +1,2 @@
 # Live Link 
-https://razaan-reza-portfolio.netlify.app/
+https://razaan-portfolio.netlify.app/
