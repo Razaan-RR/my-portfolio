@@ -121,13 +121,11 @@ function Projects() {
       id="projects"
       className="relative overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-[#050816] via-[#0B1120] to-[#050816] px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-10"
     >
-      {/* Background Glow */}
-      <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-cyan-500/20 blur-[120px] animate-pulse-slow" />
-      <div className="absolute -bottom-32 right-10 h-96 w-96 rounded-full bg-purple-500/20 blur-[140px] animate-pulse-slow" />
+      <div className="absolute -top-24 -left-24 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-cyan-500/20 blur-[120px] animate-pulse-slow" />
+      <div className="absolute -bottom-32 right-10 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-purple-500/20 blur-[140px] animate-pulse-slow" />
 
-      {/* Title */}
       <motion.h2
-        className="relative z-10 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent"
+        className="relative z-10 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-10 sm:mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -136,18 +134,18 @@ function Projects() {
         Featured Projects
       </motion.h2>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 w-full max-w-7xl">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 w-full max-w-7xl">
         {[backendProjects, frontendProjects].map((projects, colIndex) => (
           <motion.div
             key={colIndex}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
             initial={{ opacity: 0, x: colIndex === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h3
-              className={`text-2xl lg:text-3xl font-bold ${
+              className={`text-xl sm:text-2xl lg:text-3xl font-bold ${
                 colIndex === 0 ? 'text-purple-400' : 'text-cyan-400'
               }`}
             >
@@ -159,15 +157,15 @@ function Projects() {
                 key={index}
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-xl p-6 flex flex-col h-[560px] shadow-[0_0_40px_rgba(6,182,212,0.08)] hover:border-cyan-400/40 hover:shadow-[0_0_45px_rgba(6,182,212,0.18)] transition-all duration-300"
+                className="rounded-2xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-xl p-4 sm:p-6 flex flex-col min-h-[520px] lg:h-[560px] shadow-[0_0_40px_rgba(6,182,212,0.08)] hover:border-cyan-400/40 hover:shadow-[0_0_45px_rgba(6,182,212,0.18)] transition-all duration-300"
               >
                 <img
                   src={proj.thumbnail}
                   alt={proj.name}
-                  className="rounded-xl mb-5 w-full h-48 object-cover border border-cyan-500/20"
+                  className="rounded-xl mb-5 w-full h-48 sm:h-56 lg:h-48 object-cover border border-cyan-500/20"
                 />
 
-                <h4 className="font-bold text-xl text-white mb-4">
+                <h4 className="font-bold text-lg sm:text-xl text-white mb-4">
                   {proj.name}
                 </h4>
 
@@ -176,26 +174,26 @@ function Projects() {
                     {proj.tech.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 rounded-full border border-cyan-400/20 bg-cyan-500/10 text-cyan-300 text-xs font-semibold"
+                        className="px-3 py-1 rounded-full border border-cyan-400/20 bg-cyan-500/10 text-cyan-300 text-[11px] sm:text-xs font-semibold"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <ul className="list-disc list-inside text-slate-300 text-sm leading-7 flex-grow">
+                  <ul className="list-disc list-inside text-slate-300 text-sm leading-6 sm:leading-7 flex-grow">
                     {proj.features.map((feat, i) => (
                       <li key={i}>{feat}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3">
                   <motion.a
                     href={proj.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-5 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700 transition"
+                    className="inline-flex w-full flex-1 items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-5 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700 transition"
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -207,7 +205,7 @@ function Projects() {
                     href={proj.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_35px_rgba(6,182,212,0.45)] transition"
+                    className="inline-flex w-full flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_35px_rgba(6,182,212,0.45)] transition"
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.95 }}
                   >
