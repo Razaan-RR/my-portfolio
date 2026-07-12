@@ -6,7 +6,7 @@ const frontendProjects = [
   {
     name: 'AI Call Management System',
     thumbnail: '/ai-call-management.png',
-    tech: ['React', 'React Router', 'Tailwind CSS', 'Lucide Icons', 'Figma'],
+    tech: ['React', 'React Router', 'Tailwind CSS', 'Lucide Icons'],
     link: 'https://ai-call-management.netlify.app/',
     github: 'https://github.com/Razaan-RR/call-management',
     features: [
@@ -87,7 +87,7 @@ const backendProjects = [
     github: 'https://github.com/Razaan-RR/stock-app-typescript-nextjs',
     features: [
       'Secure authentication system with protected routes and personalized user sessions',
-      'User-specific watchlist management with real-time tracking',
+      'User-specific watchlist with real-time tracking',
       'Live stock price and percentage change updates',
     ],
   },
