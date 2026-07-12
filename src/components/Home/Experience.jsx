@@ -17,6 +17,20 @@ function Experience() {
         'Collaborated with team members to ensure smooth integration of LMS modules and consistent system functionality',
       ],
     },
+    {
+      role: 'Teaching Assistant (TA)',
+      period: 'November 2024 - January 2026',
+      company: 'Department of Computer Science & Engineering, ULAB',
+      location: 'Dhaka, Bangladesh',
+      workType: 'On-site',
+      points: [
+        'Assisted faculty members in conducting undergraduate laboratory and tutorial sessions.',
+        'Guided students in programming, algorithms, data structures, and software engineering courses.',
+        'Provided academic support by answering questions, reviewing assignments, and mentoring students.',
+        'Evaluated lab assignments, quizzes, and programming tasks while ensuring timely feedback.',
+        'Collaborated with faculty to prepare course materials and maintain a productive learning environment.',
+      ],
+    },
   ]
 
   return (
@@ -57,7 +71,9 @@ function Experience() {
 
               {/* meta info */}
               <div className="mt-1 flex flex-wrap items-center gap-3">
-                <span className="text-[15px] font-medium text-cyan-600">{exp.company}</span>
+                <span className="text-[15px] font-medium text-cyan-600">
+                  {exp.company}
+                </span>
 
                 {exp.location && (
                   <span className="text-sm flex items-center gap-1 text-slate-500">

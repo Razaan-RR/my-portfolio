@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 function Navbar() {
   const [open, setOpen] = useState(false)
 
-  const links = ['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact']
+  const links = ['Home', 'About', 'Skills', 'Experience', 'Education', 'Projects', 'Contact']
 
   return (
     <>
