@@ -5,87 +5,92 @@ function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center overflow-hidden
-      px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100"
+      className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 bg-gradient-to-b from-[#050816] via-[#0B1120] to-[#050816]"
     >
-      <div className="absolute -top-20 -left-20 h-60 w-60 md:h-80 md:w-80 rounded-full bg-cyan-300/20 blur-3xl animate-pulse-slow" />
-      <div className="absolute -bottom-28 right-10 h-72 w-72 md:h-96 md:w-96 rounded-full bg-purple-300/20 blur-3xl animate-pulse-slow delay-500" />
+      {/* Background Glow */}
+      <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-cyan-500/20 blur-[120px]" />
+      <div className="absolute -bottom-24 right-0 h-96 w-96 rounded-full bg-purple-500/20 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative flex justify-center md:justify-end mt-10 md:mt-0">
-            <div className="absolute h-64 w-64 md:h-72 md:w-72 rounded-3xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 blur-2xl opacity-40 animate-spin-slow" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          {/* Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Glow */}
+            <div className="absolute h-80 w-80 rounded-full bg-gradient-to-r from-cyan-500/40 via-blue-500/30 to-purple-500/40 blur-[90px] animate-pulse-slow" />
 
-            <div className="relative h-60 w-60 md:h-64 md:w-64 rounded-3xl bg-white/50 backdrop-blur-xl p-2 shadow-2xl">
+            {/* Card */}
+            <div className="relative h-72 w-72 rounded-3xl bg-slate-900/70 backdrop-blur-2xl border border-cyan-500/20 p-3 shadow-[0_0_60px_rgba(6,182,212,0.2)]">
               <img
                 src={profile}
                 alt="Razaan Reza"
-                className="h-full w-full object-cover rounded-2xl transform transition-transform hover:scale-105"
+                className="h-full w-full rounded-2xl object-cover transition duration-500 hover:scale-105"
               />
             </div>
 
-            <div className="absolute -bottom-4 right-0 rounded-full bg-white/70 backdrop-blur px-3 py-1 text-xs font-semibold text-slate-700 shadow-md animate-bounce">
-              👋 Hello!
+            {/* Badge */}
+            <div className="absolute -bottom-5 right-2 rounded-full border border-cyan-500/20 bg-slate-900/80 backdrop-blur-xl px-4 py-2 text-sm font-semibold text-cyan-300 shadow-lg">
+              👋 Nice to meet you
             </div>
           </div>
 
-          <div className="space-y-6 text-center md:text-left">
-            <h2
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight
-              bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent"
-            >
+          {/* Content */}
+          <div className="space-y-8 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               About Me
             </h2>
 
-            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
+            <p className="text-slate-300 text-base leading-8 max-w-2xl mx-auto lg:mx-0 animate-slide-in-left">
               I am{' '}
-              <span className="font-semibold text-cyan-500">Razaan Reza</span>,
-              a Full Stack Developer focused on building practical web
-              applications using <span className="font-semibold">Laravel</span>{' '}
-              on the backend and working extensively with{' '}
-              <span className="font-semibold">Blade templates </span>
-              to implement UI based on provided controllers and models.
+              <span className="font-semibold text-cyan-400">Razaan Reza</span>,
+              a passionate Full Stack Developer dedicated to building modern,
+              scalable, and user-friendly web applications. My primary expertise
+              lies in{' '}
+              <span className="font-semibold text-cyan-400">Laravel</span>,
+              where I develop secure backend systems following the{' '}
+              <span className="font-semibold text-cyan-400">
+                MVC architecture
+              </span>
+              , integrate{' '}
+              <span className="font-semibold text-cyan-400">RESTful APIs</span>,
+              and implement features such as{' '}
+              <span className="font-semibold text-cyan-400">
+                authentication
+              </span>
+              ,{' '}
+              <span className="font-semibold text-cyan-400">
+                role-based access control
+              </span>
+              , and{' '}
+              <span className="font-semibold text-cyan-400">
+                CRUD operations
+              </span>
+              . On the frontend, I build responsive interfaces using{' '}
+              <span className="font-semibold text-cyan-400">
+                Blade Templates
+              </span>
+              ,{' '}
+              <span className="font-semibold text-cyan-400">Tailwind CSS</span>,{' '}
+              <span className="font-semibold text-cyan-400">React</span>,{' '}
+              <span className="font-semibold text-cyan-400">Next.js</span>,{' '}
+              <span className="font-semibold text-cyan-400">TypeScript</span>,
+              and <span className="font-semibold text-cyan-400">Node.js</span>,
+              ensuring every application is clean, maintainable, performant, and
+              production-ready.
             </p>
 
-            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              My work mainly involves integrating{' '}
-              <span className="font-semibold">MVC architecture</span>, handling{' '}
-              <span className="font-semibold">RESTful APIs</span>, and building
-              features such as{' '}
-              <span className="font-semibold">authentication systems</span>,
-              <span className="font-semibold"> role-based access control</span>,
-              and
-              <span className="font-semibold"> CRUD modules</span> in Laravel
-              applications.
-            </p>
-
-            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              On the frontend side, I work with{' '}
-              <span className="font-semibold">Blade UI</span>, along with modern
-              styling using <span className="font-semibold">Tailwind CSS</span>,
-              to create responsive and structured interfaces that align with
-              backend logic.
-            </p>
-
-            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto md:mx-0 animate-slide-in-left">
-              I focus on writing clean, maintainable code while following
-              Laravel’s structure. Most of my experience comes from implementing
-              backend-driven features into functional, production-style web
-              applications.
-            </p>
-
-            <div className="flex justify-center md:justify-start gap-4 mt-4 flex-wrap">
+            {/* Buttons */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-5">
               <a
                 href="#projects"
-                className="rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 px-6 py-2 font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 animate-fade-in"
+                className="rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-3 font-semibold text-white shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-300 hover:scale-105 hover:shadow-cyan-400/40"
               >
-                See My Work
+                View Projects
               </a>
 
               <a
                 href="/resume.pdf"
                 download
-                className="rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 px-6 py-2 font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 animate-fade-in"
+                className="rounded-full border border-cyan-500/20 bg-slate-900/70 backdrop-blur-xl px-8 py-3 font-semibold text-slate-200 transition-all duration-300 hover:bg-slate-800 hover:border-cyan-400"
               >
                 Download Resume
               </a>
@@ -96,44 +101,34 @@ function About() {
 
       <style>
         {`
-          @keyframes spinSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
-          .animate-spin-slow {
-            animation: spinSlow 20s linear infinite;
-          }
-
           @keyframes pulseSlow {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.6; }
-          }
-          .animate-pulse-slow {
-            animation: pulseSlow 6s ease-in-out infinite;
-          }
-
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          .animate-fade-in {
-            animation: fadeIn 1.2s ease forwards;
+            0%,100%{
+              transform:scale(1);
+              opacity:.35;
+            }
+            50%{
+              transform:scale(1.08);
+              opacity:.6;
+            }
           }
 
-          @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-          .animate-slide-in-left {
-            animation: slideInLeft 1.2s ease forwards;
+          .animate-pulse-slow{
+            animation:pulseSlow 6s ease-in-out infinite;
           }
 
-          @keyframes bounceSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+          @keyframes slideInLeft{
+            from{
+              opacity:0;
+              transform:translateX(-20px);
+            }
+            to{
+              opacity:1;
+              transform:translateX(0);
+            }
           }
-          .animate-bounce-slow {
-            animation: bounceSlow 2.5s infinite;
+
+          .animate-slide-in-left{
+            animation:slideInLeft 1s ease forwards;
           }
         `}
       </style>

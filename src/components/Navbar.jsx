@@ -4,22 +4,33 @@ import { Link } from 'react-scroll'
 function Navbar() {
   const [open, setOpen] = useState(false)
 
-  const links = ['Home', 'About', 'Skills', 'Experience', 'Education', 'Projects', 'Contact']
+  const links = [
+    'Home',
+    'About',
+    'Skills',
+    'Experience',
+    'Education',
+    'Projects',
+    'Contact',
+  ]
 
   return (
     <>
       <nav
         className="fixed top-5 left-1/2 z-[9999] w-[92%] max-w-6xl -translate-x-1/2
-rounded-2xl border border-[#04a8c1]/25
-bg-gradient-to-r from-[#c8e9f2] via-[#b4e8f6] to-[#92d0e1]
-shadow-[0_0_25px_rgba(4,168,193,0.20)]"
+rounded-2xl border border-cyan-500/20
+bg-slate-900/70 backdrop-blur-2xl
+shadow-[0_0_35px_rgba(6,182,212,0.15)]"
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <h1 className="text-xl font-bold tracking-wide bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Razaan<span className="text-slate-700">Reza</span>
+          <h1 className="text-2xl font-extrabold tracking-wide">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Razaan
+            </span>
+            <span className="text-white">Reza</span>
           </h1>
 
-          <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-black">
+          <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
             {links.map((item) => (
               <li key={item}>
                 <Link
@@ -27,7 +38,7 @@ shadow-[0_0_25px_rgba(4,168,193,0.20)]"
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  className="relative cursor-pointer transition hover:text-slate-900 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-purple-500 after:transition-all hover:after:w-full"
+                  className="relative cursor-pointer transition-all duration-300 hover:text-cyan-400 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-cyan-400 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item}
                 </Link>
@@ -40,24 +51,24 @@ shadow-[0_0_25px_rgba(4,168,193,0.20)]"
             smooth={true}
             duration={800}
             offset={-100}
-            className="hidden md:inline-block rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:scale-105 hover:shadow-cyan-500/40 cursor-pointer"
+            className="hidden md:inline-flex items-center rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40 cursor-pointer"
           >
             Contact
           </Link>
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-slate-800 focus:outline-none"
+            className="md:hidden text-white focus:outline-none"
           >
             <div className="space-y-1.5">
               <span
-                className={`block h-0.5 w-6 bg-slate-800 transition ${open ? 'translate-y-2 rotate-45' : ''}`}
+                className={`block h-0.5 w-6 bg-white transition ${open ? 'translate-y-2 rotate-45' : ''}`}
               ></span>
               <span
-                className={`block h-0.5 w-6 bg-slate-800 transition ${open ? 'opacity-0' : ''}`}
+                className={`block h-0.5 w-6 bg-white transition ${open ? 'opacity-0' : ''}`}
               ></span>
               <span
-                className={`block h-0.5 w-6 bg-slate-800 transition ${open ? '-translate-y-2 -rotate-45' : ''}`}
+                className={`block h-0.5 w-6 bg-white transition ${open ? '-translate-y-2 -rotate-45' : ''}`}
               ></span>
             </div>
           </button>
@@ -65,7 +76,7 @@ shadow-[0_0_25px_rgba(4,168,193,0.20)]"
       </nav>
 
       <div
-        className={`fixed top-24 left-1/2 z-[9998] w-[92%] max-w-6xl -translate-x-1/2 rounded-2xl border border-white/40 bg-slate-100/70 backdrop-blur-xl shadow-lg transition-all duration-300 md:hidden ${
+        className={`fixed top-24 left-1/2 z-[9998] w-[92%] max-w-6xl -translate-x-1/2 rounded-2xl border border-cyan-500/20 bg-slate-900/90 backdrop-blur-2xl shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 md:hidden ${
           open
             ? 'opacity-100 scale-100'
             : 'pointer-events-none opacity-0 scale-95'
@@ -80,7 +91,7 @@ shadow-[0_0_25px_rgba(4,168,193,0.20)]"
                 duration={800}
                 offset={-100}
                 onClick={() => setOpen(false)}
-                className="text-lg font-medium transition hover:text-cyan-600 cursor-pointer"
+                className="text-lg font-medium text-slate-300 transition hover:text-cyan-400 cursor-pointer"
               >
                 {item}
               </Link>
@@ -93,7 +104,7 @@ shadow-[0_0_25px_rgba(4,168,193,0.20)]"
             duration={800}
             offset={-100}
             onClick={() => setOpen(false)}
-            className="mt-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg cursor-pointer"
+            className="mt-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:scale-105 cursor-pointer"
           >
             Contact
           </Link>

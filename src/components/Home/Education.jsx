@@ -21,7 +21,7 @@ function Education() {
       points: [
         'Completed Bachelor of Science with a CGPA of 3.68.',
         'Built a strong foundation in software engineering, databases, algorithms, and web development.',
-        'Participated and placed in several inter-university competitive programming contests.'
+        'Participated and placed in several inter-university competitive programming contests.',
       ],
     },
   ]
@@ -29,15 +29,15 @@ function Education() {
   return (
     <section
       id="education"
-      className="relative flex items-center justify-center px-6 py-20 bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100"
+      className="relative flex items-center justify-center overflow-hidden px-6 py-10 bg-gradient-to-b from-[#050816] via-[#0B1120] to-[#050816]"
     >
       {/* Background Glow */}
-      <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl animate-pulse-slow" />
-      <div className="absolute -bottom-28 right-10 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl animate-pulse-slow" />
+      <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-cyan-500/20 blur-[120px] animate-pulse-slow" />
+      <div className="absolute -bottom-32 right-10 h-96 w-96 rounded-full bg-purple-500/20 blur-[140px] animate-pulse-slow" />
 
       <div className="relative z-10 w-full max-w-5xl">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
           Education
         </h2>
 
@@ -45,42 +45,42 @@ function Education() {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="relative bg-white/50 backdrop-blur-xl rounded-xl shadow-lg p-6 overflow-hidden border border-white/40"
+              className="relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-xl p-6 shadow-[0_0_40px_rgba(6,182,212,0.08)] transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(6,182,212,0.18)]"
             >
-              {/* Left Border */}
+              {/* Left Gradient Border */}
               <div className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-cyan-400 via-blue-500 to-purple-500" />
 
-              {/* Right Border */}
+              {/* Right Gradient Border */}
               <div className="absolute right-0 top-0 h-full w-[4px] bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-400" />
 
               {/* Header */}
-              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-800">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">
                     {edu.degree}
                   </h3>
 
-                  <div className="mt-1 flex items-center gap-2 text-cyan-600 font-medium">
+                  <div className="mt-2 flex items-center gap-2 text-cyan-400 font-medium">
                     <MdSchool className="text-xl" />
                     <span>{edu.institution}</span>
                   </div>
                 </div>
 
-                <span className="text-sm text-slate-500">{edu.period}</span>
+                <span className="text-sm text-slate-400">{edu.period}</span>
               </div>
 
               {/* CGPA */}
-              <div className="mt-4">
-                <span className="inline-flex px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+              <div className="mt-5">
+                <span className="inline-flex px-4 py-1.5 rounded-full text-sm font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-400/20">
                   {edu.cgpa}
                 </span>
               </div>
 
               {/* Highlights */}
-              <ul className="mt-6 space-y-2 text-slate-600 text-sm">
+              <ul className="mt-7 space-y-3 text-sm text-slate-300">
                 {edu.points.map((point, i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="text-black">•</span>
+                  <li key={i} className="flex gap-3 leading-relaxed">
+                    <span className="text-cyan-400 text-lg">•</span>
                     {point}
                   </li>
                 ))}
@@ -92,21 +92,21 @@ function Education() {
 
       <style>
         {`
-          @keyframes pulseSlow {
-            0%, 100% {
-              transform: scale(1);
-              opacity: 0.3;
-            }
-            50% {
-              transform: scale(1.1);
-              opacity: 0.6;
-            }
+        @keyframes pulseSlow {
+          0%,100% {
+            transform: scale(1);
+            opacity: .35;
           }
+          50% {
+            transform: scale(1.08);
+            opacity: .6;
+          }
+        }
 
-          .animate-pulse-slow {
-            animation: pulseSlow 6s ease-in-out infinite;
-          }
-        `}
+        .animate-pulse-slow {
+          animation: pulseSlow 6s ease-in-out infinite;
+        }
+      `}
       </style>
     </section>
   )

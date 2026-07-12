@@ -1,27 +1,39 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  font-family: 'JetBrains Mono', monospace;
+}
 
 /* ===== Scrollbar ===== */
 
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-::-webkit-scrollbar-track {
-  background: #e2e8f0;
+/* Chrome, Edge & Safari */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #22d3ee, #a855f7);
+::-webkit-scrollbar-track {
+  background: #0b1120;
   border-radius: 999px;
 }
 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #3b82f6, #8b5cf6);
+  border-radius: 999px;
+  border: 2px solid #0b1120;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #06b6d4, #7c3aed);
+  background: linear-gradient(to bottom, #22d3ee, #2563eb, #a855f7);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #04a8c1 #e2e8f0;
+  scrollbar-color: #06b6d4 #0b1120;
 }

@@ -36,64 +36,65 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="relative flex items-center justify-center px-6 bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100"
+      className="relative flex items-center justify-center overflow-hidden px-6 py-10 bg-gradient-to-b from-[#050816] via-[#0B1120] to-[#050816]"
     >
-      {/* background glow */}
-      <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl animate-pulse-slow" />
-      <div className="absolute -bottom-28 right-10 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl animate-pulse-slow" />
+      {/* Background Glow */}
+      <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-cyan-500/20 blur-[120px] animate-pulse-slow" />
+      <div className="absolute -bottom-32 right-10 h-96 w-96 rounded-full bg-purple-500/20 blur-[140px] animate-pulse-slow" />
 
       <div className="relative z-10 w-full max-w-5xl">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
           Professional Experience
         </h2>
 
-        {/* Timeline cards */}
+        {/* Timeline Cards */}
         <div className="space-y-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative bg-white/50 backdrop-blur-xl rounded-xl shadow-lg p-6 overflow-hidden border border-white/40"
+              className="relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-xl p-6 shadow-[0_0_40px_rgba(6,182,212,0.08)] transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(6,182,212,0.18)]"
             >
-              {/* left gradient border */}
+              {/* Left Gradient Border */}
               <div className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-cyan-400 via-blue-500 to-purple-500" />
 
-              {/* right gradient border */}
+              {/* Right Gradient Border */}
               <div className="absolute right-0 top-0 h-full w-[4px] bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-400" />
-              {/* header */}
-              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-                <h3 className="text-lg font-semibold text-slate-800">
+
+              {/* Header */}
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white">
                   {exp.role}
                 </h3>
 
-                <span className="text-sm text-slate-500">{exp.period}</span>
+                <span className="text-sm text-slate-400">{exp.period}</span>
               </div>
 
-              {/* meta info */}
-              <div className="mt-1 flex flex-wrap items-center gap-3">
-                <span className="text-[15px] font-medium text-cyan-600">
+              {/* Meta Info */}
+              <div className="mt-3 flex flex-wrap items-center gap-4">
+                <span className="text-[15px] font-semibold text-cyan-400">
                   {exp.company}
                 </span>
 
                 {exp.location && (
-                  <span className="text-sm flex items-center gap-1 text-slate-500">
-                    <MdLocationOn className="text-red-500 text-base" />
+                  <span className="flex items-center gap-1 text-sm text-slate-400">
+                    <MdLocationOn className="text-red-400 text-base" />
                     {exp.location}
                   </span>
                 )}
 
                 {exp.workType && (
-                  <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-green-100 text-green-600 border border-green-200">
+                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-500/10 text-green-400 border border-green-400/20">
                     {exp.workType}
                   </span>
                 )}
               </div>
 
-              {/* points */}
-              <ul className="mt-8 space-y-2 text-slate-600 text-sm">
+              {/* Points */}
+              <ul className="mt-8 space-y-3 text-sm text-slate-300">
                 {exp.points.map((point, i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="text-black">•</span>
+                  <li key={i} className="flex gap-3 leading-relaxed">
+                    <span className="text-cyan-400 text-lg">•</span>
                     {point}
                   </li>
                 ))}
@@ -103,17 +104,24 @@ function Experience() {
         </div>
       </div>
 
-      {/* background animation */}
+      {/* Animation */}
       <style>
         {`
-          @keyframes pulseSlow {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.6; }
+        @keyframes pulseSlow {
+          0%,100% {
+            transform: scale(1);
+            opacity: .35;
           }
-          .animate-pulse-slow {
-            animation: pulseSlow 6s ease-in-out infinite;
+          50% {
+            transform: scale(1.08);
+            opacity: .6;
           }
-        `}
+        }
+
+        .animate-pulse-slow {
+          animation: pulseSlow 6s ease-in-out infinite;
+        }
+      `}
       </style>
     </section>
   )
