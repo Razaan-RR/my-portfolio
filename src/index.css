@@ -37,3 +37,33 @@
   scrollbar-width: thin;
   scrollbar-color: #06b6d4 #0b1120;
 }
+
+.heroSwiper {
+  padding-bottom: 45px;
+}
+
+.heroSwiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.heroSwiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 7px !important;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 1;
+  transition: all 0.35s ease;
+}
+
+.heroSwiper .swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.15);
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+  width: 36px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  border: none;
+}
