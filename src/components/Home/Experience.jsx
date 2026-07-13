@@ -52,16 +52,16 @@ function Experience() {
       title: 'Student Result',
     },
     {
-      image: demo3,
+      image: demo2,
       title: 'Student Result',
     },
     {
-      image: demo2,
+      image: demo3,
       title: 'Question create for exams',
     },
     {
       image: demo4,
-      title: 'Teacher attendance',
+      title: 'Question create for exams',
     },
     {
       image: attendance,
